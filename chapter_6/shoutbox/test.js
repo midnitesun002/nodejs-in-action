@@ -17,10 +17,18 @@ db.connect();
 
 let vals = [['name', 'john'], ['pass', 'salt']]
 vals = { name: 'john', pass: 'salt' }
-db.hSet('hello', Object.entries(vals).flat(), (err) => {
+db.hSet(['hello', ...Object.entries(vals).flat()], (err) => {
     if (err) console.error(err);
     db.hGetAll('hello', (err, value) => {
         if (err) console.error(err);
         console.log('value: ', value);
+    });
+    db.hKeys('hello', (err, keys) => {
+        if (err) console.error(err);
+        console.log('keys:', keys);
+    });
+    db.hVals('hello', (err, values) => {
+        if (err) console.error(err);
+        console.log('value: ', values);
     });
 });
