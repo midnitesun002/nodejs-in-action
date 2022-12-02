@@ -1,0 +1,20 @@
+{
+  "name": "listing_11_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mississippi": "^4.0.0",
+    "yargs": "^17.6.2"
+  },
+  "bin": {
+    "parse-json": "index.js"
+  }
+}
